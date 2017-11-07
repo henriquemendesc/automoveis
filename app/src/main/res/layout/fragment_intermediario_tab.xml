@@ -4,10 +4,14 @@
     android:layout_height="match_parent"
     tools:context="com.dev.bob.aluguel_automovel.fragment.IntermediarioTabFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ListView
+        android:id="@+id/listview_inter"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:divider="#20ffffff"
+        android:dividerHeight="1dp"
+        android:layout_marginLeft="8dp"/>
 
 </FrameLayout>

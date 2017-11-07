@@ -44,7 +44,7 @@ public class DBAutomoveis extends SQLiteOpenHelper {
                 + AUTO_COLUMN_DISPONIVEL + "integer"
                 + ")";
         sqLiteDatabase.execSQL(sql);
-        _insert();
+        _insert(sqLiteDatabase);
     }
 
     @Override
@@ -53,8 +53,12 @@ public class DBAutomoveis extends SQLiteOpenHelper {
         onCreate(sqLiteDatabase);
     }
 
-    private void _insert() {
-        SQLiteDatabase db = getWritableDatabase();
+    private void _insert(SQLiteDatabase dbsql) {
+        if(dbsql.isOpen()) {
+            dbsql = this.getWritableDatabase();
+        }else{
+
+        }
         nomeAuto.add(0,"Uno 2017");
         nomeAuto.add(1,"I30");
         nomeAuto.add(2,"Jeep");
@@ -72,11 +76,11 @@ public class DBAutomoveis extends SQLiteOpenHelper {
                 values.put(AUTO_COLUMN_PLACA, placaAuto.get(i));
                 values.put(AUTO_COLUMN_TYPE, typeAuto.get(i));
                 values.put(AUTO_COLUMN_DISPONIVEL, 0);
-                db.insert(AUTO_TABLE_NAME,"",values);
+                dbsql.insert(AUTO_TABLE_NAME,"",values);
             }
 
         } finally {
-            db.close();
+            dbsql.close();
         }
     }
 
