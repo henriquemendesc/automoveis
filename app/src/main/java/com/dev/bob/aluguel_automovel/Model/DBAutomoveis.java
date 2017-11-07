@@ -54,11 +54,6 @@ public class DBAutomoveis extends SQLiteOpenHelper {
     }
 
     private void _insert(SQLiteDatabase dbsql) {
-        if(dbsql.isOpen()) {
-            dbsql = this.getWritableDatabase();
-        }else{
-
-        }
         nomeAuto.add(0,"Uno 2017");
         nomeAuto.add(1,"I30");
         nomeAuto.add(2,"Jeep");

@@ -37,8 +37,8 @@ public class ExecutivoTabFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view =  inflater.inflate(R.layout.fragment_executivo_tab, container, false);
-        dbAutomoveis = new DBAutomoveis(getContext());
-        automoveis = dbAutomoveis.getAutoByType("Executivo");
+/*        dbAutomoveis = new DBAutomoveis(getContext());
+        automoveis = dbAutomoveis.getAutoByType("Executivo");*/
         ExecutivoAdapter executivoAdapter = new ExecutivoAdapter(getActivity(),R.layout.list_exec,automoveis);
         ListView listView = (ListView)view.findViewById(R.id.listview_exec);
         listView.setAdapter(executivoAdapter);
