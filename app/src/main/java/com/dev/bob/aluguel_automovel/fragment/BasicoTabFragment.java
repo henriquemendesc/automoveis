@@ -25,7 +25,7 @@ public class BasicoTabFragment extends Fragment implements AdapterView.OnItemCli
     BasicoAdapter adapter;
 
     public BasicoTabFragment() {
-        this.dbAutomoveis = new DBAutomoveis(getContext());
+        this.dbAutomoveis = new DBAutomoveis(getActivity());
         this.automoveis = dbAutomoveis.getAutoByType("Executivo");
     }
 
