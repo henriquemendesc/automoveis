@@ -48,6 +48,21 @@ public class ExecutivoAdapter extends ArrayAdapter {
         return view;
     }
 
+    @Override
+    public int getCount() {
+        return automoveis.size();
+    }
+
+    @Override
+    public Object getItem(int position) {
+        return automoveis.get(position);
+    }
+
+    @Override
+    public long getItemId(int position) {
+        return position;
+    }
+
     public class Holder
     {
         TextView txtNomeExec;

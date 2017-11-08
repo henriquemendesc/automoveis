@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/orange4"
+    tools:context="com.dev.bob.aluguel_automovel.activity.PedidoAutoActivity">
+
+    <ImageView
+        android:id="@+id/imgAutoDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:foregroundGravity="center_horizontal"
+        android:src="@drawable/unodoismiledezessete" />
+
+    <TextView
+        android:id="@+id/txtNomeDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgAutoDetails"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="Uno 2017"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtNomeDetails"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="Descrição: Ar condicionado, direção hidráulica, 1.0"
+        android:textColor="@color/black"
+        android:textSize="13dp" />
+
+    <TextView
+        android:id="@+id/txtDetailsPlaca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtDetails"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="Placa: HHB8367"
+        android:textColor="@color/black"
+        android:textSize="13dp" />
+
+    <TextView
+        android:id="@+id/txtDetailsDisp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtDetailsPlaca"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="Indisponível"
+        android:textColor="@color/black"
+        android:textSize="13dp" />
+
+    <Button
+        android:id="@+id/btnPedido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fazer Pedido"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/btn_pedido"
+        android:textColor="@color/branco"/>
+
+    <Button
+        android:id="@+id/btnPedidoIndisp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Indisponível"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:background="@color/red"
+        android:textColor="@color/branco"/>
+
+</RelativeLayout>
