@@ -10,7 +10,7 @@
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
-        android:text="Nome do carro"
+        android:text="Uno 2017"
         android:textColor="@color/black"
         android:textSize="18dp"
         android:textStyle="bold" />

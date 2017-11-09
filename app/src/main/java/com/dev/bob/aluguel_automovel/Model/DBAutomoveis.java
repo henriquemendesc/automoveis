@@ -21,11 +21,11 @@ public class DBAutomoveis extends SQLiteOpenHelper {
     public static final String AUTO_TABLE_NAME = "tableauto";
     public static final String AUTO_COLUMN_ID = "id";
     public static final String AUTO_COLUMN_NAME = "name";
-    public static final String AUTO_COLUMN_PLACA = "placa";
+    public static final String AUTO_COLUMN_PRECO = "preco";
     public static final String AUTO_COLUMN_TYPE = "type";
     public static final String AUTO_COLUMN_DISPONIVEL = "disponivel";
     private static final ArrayList<String> nomeAuto = new ArrayList<String>();
-    private static final ArrayList<String> placaAuto = new ArrayList<>();
+    private static final ArrayList<String> precoAuto = new ArrayList<>();
     private static final ArrayList<String> typeAuto = new ArrayList<>();
     private static final int disponivelAuto = 0;
     private int i=0;
@@ -39,7 +39,7 @@ public class DBAutomoveis extends SQLiteOpenHelper {
         String sql = "CREATE TABLE IF NOT EXISTS " + AUTO_TABLE_NAME + " ("
                 + AUTO_COLUMN_ID + " integer primary key,"
                 + AUTO_COLUMN_NAME + " text,"
-                + AUTO_COLUMN_PLACA + " text,"
+                + AUTO_COLUMN_PRECO + " text,"
                 + AUTO_COLUMN_TYPE + "text,"
                 + AUTO_COLUMN_DISPONIVEL + "integer"
                 + ")";
@@ -57,9 +57,9 @@ public class DBAutomoveis extends SQLiteOpenHelper {
         nomeAuto.add(0,"Uno 2017");
         nomeAuto.add(1,"I30");
         nomeAuto.add(2,"Jeep");
-        placaAuto.add(0,"HHB8767");
-        placaAuto.add(1,"HGB8767");
-        placaAuto.add(2,"AHC8756");
+        precoAuto.add(0,"29.000");
+        precoAuto.add(1,"45000");
+        precoAuto.add(2,"85000");
         typeAuto.add(0,"Basico");
         typeAuto.add(1,"Intermediário");
         typeAuto.add(2,"Executivo");
@@ -68,7 +68,7 @@ public class DBAutomoveis extends SQLiteOpenHelper {
             for (i=0;nomeAuto.size() < 4;i++){
                 values.put(AUTO_COLUMN_ID, i);
                 values.put(AUTO_COLUMN_NAME, nomeAuto.get(i));
-                values.put(AUTO_COLUMN_PLACA, placaAuto.get(i));
+                values.put(AUTO_COLUMN_PRECO, precoAuto.get(i));
                 values.put(AUTO_COLUMN_TYPE, typeAuto.get(i));
                 values.put(AUTO_COLUMN_DISPONIVEL, 0);
                 dbsql.insert(AUTO_TABLE_NAME,"",values);
@@ -91,7 +91,7 @@ public class DBAutomoveis extends SQLiteOpenHelper {
                     automoveis = new Automoveis();
                     automoveis.id = cursor.getString(cursor.getColumnIndex(AUTO_COLUMN_ID));
                     automoveis.name = cursor.getString(cursor.getColumnIndex(AUTO_COLUMN_NAME));
-                    automoveis.placa = cursor.getString(cursor.getColumnIndex(AUTO_COLUMN_PLACA));
+                    automoveis.placa = cursor.getString(cursor.getColumnIndex(AUTO_COLUMN_PRECO));
                     automoveis.type = cursor.getString(cursor.getColumnIndex(AUTO_COLUMN_TYPE));
                     automoveis.disponivel = cursor.getInt(cursor.getColumnIndex(AUTO_COLUMN_DISPONIVEL));
                     autos.add(automoveis);

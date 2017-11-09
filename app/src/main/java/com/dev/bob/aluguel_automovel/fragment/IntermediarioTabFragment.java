@@ -39,8 +39,8 @@ public class IntermediarioTabFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_intermediario_tab, container, false);
-        /*dbAutomoveis = new DBAutomoveis(getContext());
-        automoveis = dbAutomoveis.getAutoByType("Executivo");*/
+        dbAutomoveis = new DBAutomoveis(getContext());
+        automoveis = dbAutomoveis.getAutoByType("Executivo");
         IntermediarioAdapter intAdapter = new IntermediarioAdapter(getActivity(),R.layout.list_intermediario,automoveis);
         ListView listView = (ListView)view.findViewById(R.id.listview_inter);
         listView.setAdapter(intAdapter);

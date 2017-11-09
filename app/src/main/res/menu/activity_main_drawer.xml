@@ -3,6 +3,10 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/nav_adm"
+            android:icon="@drawable/icadm"
+            android:title="Conta" />
+        <item
             android:id="@+id/nav_conta"
             android:icon="@drawable/ic_account_box_black_24dp"
             android:title="Conta" />
@@ -18,6 +22,14 @@
             android:id="@+id/nav_exec"
             android:icon="@drawable/execcar"
             android:title="Executivos" />
+        <item
+            android:id="@+id/nav_pag"
+            android:icon="@drawable/iccard"
+            android:title="Pagamento" />
+        <item
+            android:id="@+id/nav_ped"
+            android:icon="@drawable/icped"
+            android:title="Pedidos" />
     </group>
 
     <item android:title="Comunicação">
